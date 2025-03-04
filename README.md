@@ -34,3 +34,19 @@
 ```Bash
     aws cloudformation deploy --template-file ecr-template.yml --stack-name dhana-spring-ecr-repo 
 ```
+
+## Create A Build Project under AWS CodeBuild
+
+    provide the github repo url
+    update the access token and verify its connected
+    checkbox for buildspec.yml
+    copy the role and update the permission boundaries
+
+## RoleName
+
+    codebuild-dhana-spring-boot-app-service-role
+
+## Attach the Following Permissions to the Role
+
+    AmazonEC2ContainerRegistryFullAccess
+    AmazonEC2ContainerRegistryPowerUser
