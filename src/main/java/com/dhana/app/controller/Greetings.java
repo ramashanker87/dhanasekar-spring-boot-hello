@@ -8,6 +8,6 @@ public class Greetings {
 
     @GetMapping("/greet")
     public String greetApi() {
-        return "Greetings from SpringBoot Applicaiton";
+        return "Greetings from SpringBoot Application";
     }
 }
