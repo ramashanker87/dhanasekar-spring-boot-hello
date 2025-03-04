@@ -54,3 +54,7 @@
 ## Create ECS Service and Task infra
 
     aws cloudformation deploy --template-file ecs-fargate-cluster.yml --stack-name dhana-cluster-hello --capabilities CAPABILITY_NAMED_IAM 
+
+## To Delete Stack
+
+    aws cloudformation delete-stack --stack-name dhana-cluster-hello
