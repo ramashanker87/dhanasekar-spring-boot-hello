@@ -50,7 +50,7 @@ Resources:
       ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
       ContainerDefinitions:
         - Name:  !Sub '${ShortSolution}-${Environment}-hello-app'
-          Image: 975050323630.dkr.ecr.us-east-1.amazonaws.com/dhana-spring-boot-hello:build-ede4b41a-eef5-4eff-99a7-d2d3f28d22a7
+          Image: 975050323630.dkr.ecr.us-east-1.amazonaws.com/dhana-spring-boot-hello:latest
           HealthCheck:
             Command: [ "CMD-SHELL","curl -f http://localhost:8080/actuator/health/ || exit 1" ]
             Interval: 30
