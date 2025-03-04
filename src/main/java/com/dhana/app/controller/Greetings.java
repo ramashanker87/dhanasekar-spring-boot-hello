@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Greetings {
 
     @GetMapping("/greet")
-    public String greetApi() {
+    public String greet() {
         return "Greetings from SpringBoot Application";
     }
 }
