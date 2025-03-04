@@ -50,3 +50,7 @@
 
     AmazonEC2ContainerRegistryFullAccess
     AmazonEC2ContainerRegistryPowerUser
+
+## Create ECS Service and Task infra
+
+    aws cloudformation deploy --template-file ecs-fargate-cluster.yml --stack-name dhana-cluster-hello --capabilities CAPABILITY_NAMED_IAM 
