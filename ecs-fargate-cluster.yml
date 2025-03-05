@@ -36,7 +36,25 @@ Resources:
             Action: sts:AssumeRole
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
-
+  # IAM Role for ECS Task to Access SNS
+  SqsConsumerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: MySqsConsumerRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: SQSAccessPolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sqs:*
+                Resource: "*"
   # ECS Task Definition
   FargateTaskDefinition:
     Type: AWS::ECS::TaskDefinition

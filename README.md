@@ -58,3 +58,4 @@
 ## To Delete Stack
 
     aws cloudformation delete-stack --stack-name dhana-cluster-hello
+    aws cloudformation delete-stack --stack-name dhana-spring-ecr-repo
